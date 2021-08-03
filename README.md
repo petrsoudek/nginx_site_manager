@@ -1,6 +1,7 @@
 # Nginx SiteManager (nsm)
 
 NSM is a tool for quickly enabling and disabling Nginx site configs on a Linux server
+
 Stop making symbolic links, start using nsm -e site.conf
 
 ## Installation
