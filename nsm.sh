@@ -1,13 +1,9 @@
 #!/bin/bash
-
-
-
 NGINX_CONF_FILE="$(awk -F= -v RS=' ' '/conf-path/ {print $2}' <<< $(nginx -V 2>&1))"
 NGINX_CONF_DIR="${NGINX_CONF_FILE%/*}"
 NGINX_SITES_AVAILABLE="$NGINX_CONF_DIR/sites-available"
 NGINX_SITES_ENABLED="$NGINX_CONF_DIR/sites-enabled"
 SELECTED_SITE="$2"
-
 
 nginx_ensite() {
     [[ ! "$SELECTED_SITE" ]] &&
@@ -41,8 +37,6 @@ ngx_list_site() {
     echo "Enabled Sites"
     ngx_sites "enabled"
 }
-
-
 
 ngx_select_site() {
     sites_avail=($NGINX_SITES_AVAILABLE/*)
@@ -105,7 +99,6 @@ ngx_help() {
     echo -e "\tIt is assumed you are using the default sites-enabled and"
     echo -e "\tsites-disabled located at $NGINX_CONF_DIR."
 }
-
 
 case "$1" in
     -e|--enable)    nginx_ensite;;
