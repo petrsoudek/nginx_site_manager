@@ -4,7 +4,7 @@ NSM is a tool for quickly enabling and disabling Nginx site configs on a Linux s
 
 ## Installation
 
-Paste the file named nsm.sh in /usr/bin/
+Paste the content of nsm.sh in /usr/bin/nsm
 and give it execution privilleges
 ```bash
 chmod +x /usr/bin/nsm.sh
