@@ -17,7 +17,6 @@ List all available sites
 
 ```bash
 sudo nsm -l
-To enable site "test_website"
 ```
 Enable site "test_site"
 ```bash
